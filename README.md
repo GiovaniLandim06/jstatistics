@@ -1,4 +1,4 @@
- Jogo de Dados em Java
+## Jogo de Dados em Java
 
 Este é um simples **Jogo de Dados** feito em Java, onde o usuário pode lançar um dado, ver os resultados dos lançamentos, incluindo a soma total e a média dos valores lançados.
 
