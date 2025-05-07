@@ -24,7 +24,7 @@ public class App {
       JOptionPane.showMessageDialog(null, resultadoLancamento, "Resultado", JOptionPane.INFORMATION_MESSAGE);
       }else  {
         String media =String.format("%.1f", (double) somaDados / contLancamentos);
-         String mensagemFinal = "O total de lançamentos foi: " + contLancamentos + "\n A soma dos números lançados foi: " + somaDados + "\nA media dos lançamentos foi: " + media; 
+         String mensagemFinal = "O total de lançamentos foi: " + contLancamentos + "\nA soma dos números lançados foi: " + somaDados + "\nA media dos lançamentos foi: " + media; 
         JOptionPane.showMessageDialog(null,mensagemFinal, "Resultado final do Jogo", JOptionPane.INFORMATION_MESSAGE);
         break;
       }
