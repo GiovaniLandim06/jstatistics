@@ -2,23 +2,30 @@ import javax.swing.JOptionPane;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    // Classe é um conjunto de objetos
-    // Nosso objetivo nesse código é entender a diferença
-    // Entre metodo com o tipo void e metodo com o Tipo String
+    
+    int numAreas = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantas aréas deseja armazenar?"));
+    int[] areas = new int[numAreas];
 
-    Mamifero m1 = new Mamifero();
-    m1.setNomeCientifico("Bos Taurus");
-    System.out.println("Nome cientifico: " + m1.getNomeCientifico());
+    for (int i = 0; i < areas.length; i++) {
+      int area = Integer
+          .parseInt(JOptionPane.showInputDialog(null, "Qual a area em metros quadrados do Jardim #" + (i + 1)));
+      areas[i] = area;
+        }
 
-    //Desafio: Crie mais dois objetos
+        String exibirAreas = "";
 
-    Mamifero m2 = new Mamifero();
-    m2.setNomeCientifico("Macropus");
-    System.out.println("Nome cientifico: " + m2.getNomeCientifico());
+     for (int i = 0; i < areas.length; i++) {
+        exibirAreas += "\nArea do Jardim #" + (i + 1) + " : " + areas[i];
+     }
+     JOptionPane.showMessageDialog(null, exibirAreas, "Sistema de Jardins", JOptionPane.INFORMATION_MESSAGE);
 
-    Mamifero m3 = new Mamifero();
-    m3.setNomeCientifico("Trichechus");
-    System.out.println("Nome cientifico: " + m3.getNomeCientifico());
+     Integer modaArea = null;
 
+     for (int i = 0; i < areas.length; i++) {
+      if(modaArea == areas[i])
+       modaArea = areas[i];
+     }
+
+     JOptionPane.showMessageDialog(null, modaArea, "Sistema de Jardins", JOptionPane.INFORMATION_MESSAGE);
   }
 }
