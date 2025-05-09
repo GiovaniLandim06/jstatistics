@@ -2,23 +2,19 @@ import javax.swing.JOptionPane;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    // Classe é um conjunto de objetos
-    // Nosso objetivo nesse código é entender a diferença
-    // Entre metodo com o tipo void e metodo com o Tipo String
+  
+    String nomeCliente = JOptionPane.showInputDialog(null, "Qual o seu nome?");
+    String cpf = JOptionPane.showInputDialog(null, "Qual seu CPF?");
+    
+    int largura = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual a largura do seu jardim?"));
+    int comprimento = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual o comprimento do seu jardim?"));
 
-    Mamifero m1 = new Mamifero();
-    m1.setNomeCientifico("Bos Taurus");
-    System.out.println("Nome cientifico: " + m1.getNomeCientifico());
-
-    //Desafio: Crie mais dois objetos
-
-    Mamifero m2 = new Mamifero();
-    m2.setNomeCientifico("Macropus");
-    System.out.println("Nome cientifico: " + m2.getNomeCientifico());
-
-    Mamifero m3 = new Mamifero();
-    m3.setNomeCientifico("Trichechus");
-    System.out.println("Nome cientifico: " + m3.getNomeCientifico());
-
+    JOptionPane.showMessageDialog(null, nomeCliente, cpf, comprimento);
+ 
   }
+
+  public int calcularArea(int largura, int comprimento){
+    return largura * comprimento;
+  }
+
 }
