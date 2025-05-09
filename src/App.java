@@ -2,23 +2,20 @@ import javax.swing.JOptionPane;
 
 public class App {
   public static void main(String[] args) throws Exception {
-    // Classe é um conjunto de objetos
-    // Nosso objetivo nesse código é entender a diferença
-    // Entre metodo com o tipo void e metodo com o Tipo String
+  
+    JOptionPane.showMessageDialog(null, "Alô, Jardim!", "Sistema de Serviços para Jardim", JOptionPane.INFORMATION_MESSAGE);
 
-    Mamifero m1 = new Mamifero();
-    m1.setNomeCientifico("Bos Taurus");
-    System.out.println("Nome cientifico: " + m1.getNomeCientifico());
+    String nome = JOptionPane.showInputDialog(null, "Qual é o seu nome?");
+    String endereco =JOptionPane.showInputDialog(null, "Qual é o seu Endereço?");
+    int largura =Integer.parseInt(JOptionPane.showInputDialog(null, "Qual é a largura do seu Jardim?"));
+    int comprimento =Integer.parseInt(JOptionPane.showInputDialog(null, "Qual é o comprimento do seu Jardim?"));
 
-    //Desafio: Crie mais dois objetos
+    Cliente cliente = new Cliente(nome, endereco, largura, comprimento);
 
-    Mamifero m2 = new Mamifero();
-    m2.setNomeCientifico("Macropus");
-    System.out.println("Nome cientifico: " + m2.getNomeCientifico());
+    String mensagem = "Seu nome é: " + cliente.getNome() + "\nVocê mora no endereço: " + cliente.getEndereco() + "\nE a aréa do seu jardim é: " + cliente.calcularArea();
 
-    Mamifero m3 = new Mamifero();
-    m3.setNomeCientifico("Trichechus");
-    System.out.println("Nome cientifico: " + m3.getNomeCientifico());
+    JOptionPane.showMessageDialog(null, mensagem, "Sistema de Serviços para Jardim", JOptionPane.INFORMATION_MESSAGE);
+
 
   }
 }
