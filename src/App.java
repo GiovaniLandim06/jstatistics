@@ -19,13 +19,6 @@ public class App {
      }
      JOptionPane.showMessageDialog(null, exibirAreas, "Sistema de Jardins", JOptionPane.INFORMATION_MESSAGE);
 
-     Integer modaArea = null;
-
-     for (int i = 0; i < areas.length; i++) {
-      if(modaArea == areas[i])
-       modaArea = areas[i];
-     }
-
-     JOptionPane.showMessageDialog(null, modaArea, "Sistema de Jardins", JOptionPane.INFORMATION_MESSAGE);
+  
   }
 }
